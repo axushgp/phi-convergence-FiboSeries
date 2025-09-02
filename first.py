@@ -26,14 +26,14 @@ def calculate_series():
         messagebox.showerror("Invalid Input", f"Error: {e}")
 
 
-# Create main window
+
 root = tk.Tk()
 root.title("Fibonacci & Golden Ratio")
 root.geometry("560x450")
 root.configure(bg="#f2f2f2")
 root.resizable(False, False)
 
-# Title Label
+
 title_label = tk.Label(
     root,
     text="Fibonacci Series & Golden Ratio Calculator",
@@ -43,7 +43,7 @@ title_label = tk.Label(
 )
 title_label.pack(pady=20)
 
-# Frame for input
+
 input_frame = tk.Frame(root, bg="#f2f2f2")
 input_frame.pack(pady=10)
 
@@ -61,11 +61,11 @@ entry.grid(row=0, column=1, padx=5)
 calc_button = ttk.Button(input_frame, text="Calculate", command=calculate_series)
 calc_button.grid(row=0, column=2, padx=10)
 
-# Separator
+
 separator = ttk.Separator(root, orient="horizontal")
 separator.pack(fill="x", pady=15)
 
-# Result Label
+
 result_frame = tk.Frame(root, bg="white", bd=2, relief="groove")
 result_frame.pack(padx=20, pady=10, fill="both", expand=True)
 
@@ -80,5 +80,4 @@ result_label = tk.Label(
 )
 result_label.pack(padx=10, pady=10, fill="both", expand=True)
 
-# Start the app
 root.mainloop()
